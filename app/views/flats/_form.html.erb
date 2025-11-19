@@ -1,0 +1,15 @@
+<div class="bg-white p-4 rounded shadow-sm">
+  <%= simple_form_for(flat) do |f| %>
+    <%= f.input :name %>
+    <%= f.input :address %>
+    <%= f.input :description %>
+    <%= f.input :number_of_guests %>
+    <%= f.input :picture_url, label: "URL de l'image", placeholder: "https://images.unsplash.com/..." %>
+    <%= f.input :price_per_night %>
+
+    <div class="d-flex justify-content-between mt-4">
+      <%= f.submit class: "btn btn-primary" %>
+      <%= link_to "Cancel", flats_path, class: "btn btn-danger" %>
+    </div>
+  <% end %>
+</div>
